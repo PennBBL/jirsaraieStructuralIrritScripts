@@ -38,7 +38,7 @@ subjID="bblid,scanid"
 #####   Do Not Include Method as it will be Defined in gamROI.R (method="REML")   #####    
 #######################################################################################
 
-covsFormula="~s(ageatscan,k=4)+ari_total+ManualRating"
+covsFormula="~s(ageatscan,k=4)+ari_total+ManualRating+sex"
 
 pAdjustMethod="fdr"
 
