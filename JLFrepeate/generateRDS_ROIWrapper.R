@@ -47,7 +47,7 @@ pncQA <- pncQA[(pncQA$bblid %in% grmpyQA$bblid),]
 
 setdiff(grmpyQA$bblid,pncQA$bblid)
 
-pncQA <- rbind(pncQA, c(99964, 9964, 2.000, 0))
+pncQA <- rbind(pncQA, c(99964, 9964, 1.33333, 0))
 
 ######################################################################
 ##### Rescales the PNC data to be Consistent with the GRMPY Data #####
@@ -70,6 +70,8 @@ pncQA$t1Exclude[pncQA$t1Exclude == 3] <- 1
 colnames(pncDemo)[3] <- "ageatscan"
 colnames(pncQA)[3] <- "ManualRating"
 colnames(pncQA)[4] <- "T1exclude"
+colnames(grmpyARI)[3] <- "ARIavg"
+colnames(grmpyARI)[4] <- "ARItotal"
 
 ###########################################################
 ##### Combines the datasets into a Master Spreadsheet #####
@@ -94,6 +96,8 @@ Final$T1exclude <- as.factor(Final$T1exclude)
 Final$sex <- as.factor(Final$sex)
 
 Final$race <- as.factor(Final$race)
+
+colnames(Final)[2] <- "scanid"
 
 #####################################
 ##### Write the Output RDS File #####
