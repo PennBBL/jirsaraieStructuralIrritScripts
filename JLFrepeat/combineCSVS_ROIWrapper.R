@@ -19,14 +19,14 @@
 ##### Reads in all the Volume, Cortical Thickness, and Grey Matter Density Data #####
 #####################################################################################
 
-grmpyVOL <- read.csv("/data/joy/BBL/projects/jirsaraieStructuralIrrit/data/JLFrepeate/n118_jlfAntsCTIntersectionVol_20170911.csv")
-pncVOL <- read.csv("/data/joy/BBL/projects/jirsaraieStructuralIrrit/data/JLFrepeate/n1601_jlfAntsCTIntersectionVol_20170412.csv")
+grmpyVOL <- read.csv("/data/joy/BBL/projects/jirsaraieStructuralIrrit/data/JLFrepeat/n118_jlfAntsCTIntersectionVol_20170911.csv")
+pncVOL <- read.csv("/data/joy/BBL/projects/jirsaraieStructuralIrrit/data/JLFrepeat/n1601_jlfAntsCTIntersectionVol_20170412.csv")
 
-grmpyCT <- read.csv("/data/joy/BBL/projects/jirsaraieStructuralIrrit/data/JLFrepeate/n118_jlfAntsCTIntersectionCT_20170911.csv")
-pncCT <- read.csv("/data/joy/BBL/projects/jirsaraieStructuralIrrit/data/JLFrepeate/n1601_jlfAntsCTIntersectionCT_20170331.csv")
+grmpyCT <- read.csv("/data/joy/BBL/projects/jirsaraieStructuralIrrit/data/JLFrepeat/n118_jlfAntsCTIntersectionCT_20170911.csv")
+pncCT <- read.csv("/data/joy/BBL/projects/jirsaraieStructuralIrrit/data/JLFrepeat/n1601_jlfAntsCTIntersectionCT_20170331.csv")
 
-grmpyGMD <- read.csv("/data/joy/BBL/projects/jirsaraieStructuralIrrit/data/JLFrepeate/n118_jlfAntsCTIntersectionGMDr_20171104.csv")
-pncGMD <- read.csv("/data/joy/BBL/projects/jirsaraieStructuralIrrit/data/JLFrepeate/n1601_jlfAtroposIntersectionGMD_20170410.csv")
+grmpyGMD <- read.csv("/data/joy/BBL/projects/jirsaraieStructuralIrrit/data/JLFrepeat/n118_jlfAntsCTIntersectionGMDr_20171104.csv")
+pncGMD <- read.csv("/data/joy/BBL/projects/jirsaraieStructuralIrrit/data/JLFrepeat/n1601_jlfAtroposIntersectionGMD_20170410.csv")
 
 ##################################################################################
 ##### Finds Missing Subjects Data (99964) and Binds it to the needed Dataset #####
@@ -85,11 +85,11 @@ GMD <-rbind(pncGMD,grmpyGMD)
 ##### Outputs the Combined CSV Files #####
 ##########################################
 
-write.csv(VOL, paste('/data/joy/BBL/projects/jirsaraieStructuralIrrit/data/JLFrepeate/n236_jlfAntsCTIntersectionVOL_',format(Sys.Date(), format="%Y%m%d"),'.csv', sep=''), quote=F, row.names=F)
+write.csv(VOL, paste('/data/joy/BBL/projects/jirsaraieStructuralIrrit/data/JLFrepeat/n236_jlfAntsCTIntersectionVOL_',format(Sys.Date(), format="%Y%m%d"),'.csv', sep=''), quote=F, row.names=F)
 
-write.csv(CT, paste('/data/joy/BBL/projects/jirsaraieStructuralIrrit/data/JLFrepeate/n236_jlfAntsCTIntersectionCT_',format(Sys.Date(), format="%Y%m%d"),'.csv', sep=''), quote=F, row.names=F)
+write.csv(CT, paste('/data/joy/BBL/projects/jirsaraieStructuralIrrit/data/JLFrepeat/n236_jlfAntsCTIntersectionCT_',format(Sys.Date(), format="%Y%m%d"),'.csv', sep=''), quote=F, row.names=F)
 
-write.csv(GMD, paste('/data/joy/BBL/projects/jirsaraieStructuralIrrit/data/JLFrepeate/n236_jlfAtroposIntersectionGMD_',format(Sys.Date(), format="%Y%m%d"),'.csv', sep=''), quote=F, row.names=F)
+write.csv(GMD, paste('/data/joy/BBL/projects/jirsaraieStructuralIrrit/data/JLFrepeat/n236_jlfAtroposIntersectionGMD_',format(Sys.Date(), format="%Y%m%d"),'.csv', sep=''), quote=F, row.names=F)
 
 ###################################################################################################
 #####  ⚡  ⚡  ⚡  ⚡  ⚡  ⚡  ⚡  ⚡  ⚡  ⚡  ⚡  ⚡  ⚡  ⚡  ⚡  ⚡  ⚡  ⚡  ⚡  ⚡  ⚡  ⚡  ⚡  ⚡  ⚡  ⚡  ⚡  ⚡  ⚡  #####
