@@ -20,7 +20,7 @@ USE
 ##### Define the RDS File and Output Path #####
 ###############################################
 
-subjDataName="/data/jux/BBL/projects/jirsaraieStructuralIrrit/data/n140_TP1_NMF/n140_ARI+DEMO+QA_20180216.rds"
+subjDataName="/data/jux/BBL/projects/jirsaraieStructuralIrrit/data/n140_TP1_NMF/n140_ARI+DEMO+QA_20180531.rds"
 
 input="/data/jux/BBL/projects/jirsaraieStructuralIrrit/data/n140_TP1_NMF/n140_Nmf24BasesCT_COMBAT_TP1.csv"
 
@@ -32,7 +32,7 @@ OutDirRoot="/data/jux/BBL/projects/jirsaraieStructuralIrrit/output/n140_TP1_NMF"
 #####         Subjects To Include are Coded as "1" and the Ones to Exclude are "0"            #####
 ###################################################################################################
 
-covsFormula="~s(ageAtScan1,k=4)+TP2ari_total+averageManualRating+sex"
+covsFormula="~s(ageAtScan1,k=4)+IrritabilitySum+averageManualRating+sex"
 
 #######################################################################################
 ##### Define the Formula to Run, including the amount of knots and the Predictors #####
